@@ -1,0 +1,748 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000000615a5303, pid=12744, tid=0x000000000000203c
+#
+# JRE version: OpenJDK Runtime Environment (8.0_265-b01) (build 1.8.0_265-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.265-b01 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x55303]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugzilla.redhat.com/enter_bug.cgi
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001544f000):  VMThread [stack: 0x0000000016870000,0x0000000016970000] [id=8252]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x0000000061c17530, RBX=0x0000800000000000, RCX=0x00000000152ba0a0, RDX=0x00000000ed447328
+RSP=0x000000001696f020, RBP=0x000000001696f180, RSI=0x000000001696f0b0, RDI=0x0000000015329a58
+R8 =0x00000000ec400000, R9 =0x000000000000ea6d, R10=0x00000000546c6148, R11=0x000000001696f078
+R12=0x0000000000000004, R13=0x000000000006f9b8, R14=0x000000000006f9b8, R15=0x0000000061dabaf8
+RIP=0x00000000615a5303, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000001696f020)
+0x000000001696f020:   0000000002dfab60 00000000617e1968
+0x000000001696f030:   0000000002dfab60 00000000617e1968
+0x000000001696f040:   0000000000000b36 000000006161c8d9
+0x000000001696f050:   0000000002f467f0 0000000000000000
+0x000000001696f060:   0000000061dab990 0000000000000004
+0x000000001696f070:   000000001696f1e0 00000000615a62fd
+0x000000001696f080:   0000000061dabaf8 000000001696f148
+0x000000001696f090:   0000000061c17578 000000001696f198
+0x000000001696f0a0:   000000001696f0b0 000000001696f1e0
+0x000000001696f0b0:   0000000d00000792 0000000002ff7a30
+0x000000001696f0c0:   0000000002ff7a18 00000003f93399b3
+0x000000001696f0d0:   0000000002dfab60 0000000061996320
+0x000000001696f0e0:   0000000015f307c0 0000000061c17578
+0x000000001696f0f0:   0000000061c17578 0000000002fc6a40
+0x000000001696f100:   0000000061dab990 0000000000000000
+0x000000001696f110:   0000000061dab990 0000000000000000 
+
+Instructions: (pc=0x00000000615a5303)
+0x00000000615a52e3:   59 21 82 00 48 8b 48 08 49 8b 5c 0d 00 49 8d 3c
+0x00000000615a52f3:   0e 48 85 db 74 55 4c 8b 7c 24 60 66 90 49 8b 07
+0x00000000615a5303:   48 8b 53 10 49 8b cf ff 10 84 c0 74 19 48 85 ed
+0x00000000615a5313:   74 0e 48 8b 45 00 48 8d 53 10 48 8b cd ff 50 08 
+
+
+Register to memory mapping:
+
+RAX=0x0000000061c17530 is an unknown value
+RBX=0x0000800000000000 is an unknown value
+RCX=0x00000000152ba0a0 is an unknown value
+RDX=0x00000000ed447328 is an oop
+java.lang.String 
+ - klass: 'java/lang/String'
+RSP=0x000000001696f020 is an unknown value
+RBP=0x000000001696f180 is an unknown value
+RSI=0x000000001696f0b0 is an unknown value
+RDI=0x0000000015329a58 is an unknown value
+R8 =0x00000000ec400000 is an oop
+[I 
+ - klass: {type array int}
+ - length: 0
+R9 =0x000000000000ea6d is an unknown value
+R10=0x00000000546c6148 is an unknown value
+R11=0x000000001696f078 is an unknown value
+R12=0x0000000000000004 is an unknown value
+R13=0x000000000006f9b8 is an unknown value
+R14=0x000000000006f9b8 is an unknown value
+R15=0x0000000061dabaf8 is an unknown value
+
+
+Stack: [0x0000000016870000,0x0000000016970000],  sp=0x000000001696f020,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x55303]
+V  [jvm.dll+0x562fd]
+V  [jvm.dll+0x446320]
+V  [jvm.dll+0x446a30]
+V  [jvm.dll+0x436434]
+V  [jvm.dll+0x448e76]
+V  [jvm.dll+0x244927]
+V  [jvm.dll+0x243bc4]
+V  [jvm.dll+0x244004]
+V  [jvm.dll+0x244280]
+V  [jvm.dll+0x2980da]
+C  [msvcr100.dll+0x21d9f]
+C  [msvcr100.dll+0x21e3b]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x4cec1]
+
+VM_Operation (0x0000000002efac90): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x0000000002f48000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000015ff6800 JavaThread "Service Thread" daemon [_thread_blocked, id=12712, stack(0x00000000171a0000,0x00000000172a0000)]
+  0x0000000015ff4800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=3068, stack(0x00000000170a0000,0x00000000171a0000)]
+  0x0000000015f4c000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=11316, stack(0x0000000016fa0000,0x00000000170a0000)]
+  0x0000000015f40000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=12740, stack(0x0000000016ea0000,0x0000000016fa0000)]
+  0x0000000015f3e800 JavaThread "Attach Listener" daemon [_thread_blocked, id=2388, stack(0x0000000016da0000,0x0000000016ea0000)]
+  0x0000000015f9e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=12116, stack(0x0000000016ca0000,0x0000000016da0000)]
+  0x0000000015457000 JavaThread "Finalizer" daemon [_thread_blocked, id=11892, stack(0x0000000016a70000,0x0000000016b70000)]
+  0x0000000015451800 JavaThread "Reference Handler" daemon [_thread_blocked, id=8944, stack(0x0000000016970000,0x0000000016a70000)]
+  0x0000000002f48000 JavaThread "main" [_thread_blocked, id=12996, stack(0x0000000002e00000,0x0000000002f00000)]
+
+Other Threads:
+=>0x000000001544f000 VMThread [stack: 0x0000000016870000,0x0000000016970000] [id=8252]
+  0x0000000015ff8000 WatcherThread [stack: 0x00000000172a0000,0x00000000173a0000] [id=12764]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000002f45960] Threads_lock - owner thread: 0x000000001544f000
+[0x0000000002f476f0] Heap_lock - owner thread: 0x0000000002f48000
+
+heap address: 0x00000000c4c00000, size: 948 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 17920K, used 15360K [0x00000000ec400000, 0x00000000ed800000, 0x0000000100000000)
+  eden space 15360K, 100% used [0x00000000ec400000,0x00000000ed300000,0x00000000ed300000)
+  from space 2560K, 0% used [0x00000000ed580000,0x00000000ed580000,0x00000000ed800000)
+  to   space 2560K, 98% used [0x00000000ed300000,0x00000000ed579648,0x00000000ed580000)
+ ParOldGen       total 40960K, used 827K [0x00000000c4c00000, 0x00000000c7400000, 0x00000000ec400000)
+  object space 40960K, 2% used [0x00000000c4c00000,0x00000000c4ccef88,0x00000000c7400000)
+ Metaspace       used 7227K, capacity 7388K, committed 7552K, reserved 1056768K
+  class space    used 756K, capacity 824K, committed 896K, reserved 1048576K
+
+Card table byte_map: [0x00000000123c0000,0x00000000125a0000] byte_map_base: 0x0000000011d9a000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000061deded0
+ Begin Bits: [0x0000000012ae0000, 0x00000000139b0000)
+ End Bits:   [0x00000000139b0000, 0x0000000014880000)
+
+Polling page: 0x0000000001170000
+
+CodeCache: size=245760Kb used=2419Kb max_used=2420Kb free=243340Kb
+ bounds [0x0000000003000000, 0x0000000003270000, 0x0000000012000000]
+ total_blobs=756 nmethods=459 adapters=210
+ compilation: enabled
+
+Compilation events (250 events):
+Event: 3.836 Thread 0x0000000015ff4800 nmethod 328 0x00000000031d7050 code [0x00000000031d7200, 0x00000000031d7958]
+Event: 3.839 Thread 0x0000000015ff4800  329       3       org.codehaus.plexus.classworlds.realm.ClassRealm::loadClass (7 bytes)
+Event: 3.840 Thread 0x0000000015ff4800 nmethod 329 0x00000000031d6950 code [0x00000000031d6ae0, 0x00000000031d6e78]
+Event: 3.846 Thread 0x0000000015f4c000  330       4       java.lang.String::startsWith (7 bytes)
+Event: 3.853 Thread 0x0000000015f4c000 nmethod 330 0x00000000031d64d0 code [0x00000000031d6620, 0x00000000031d67f8]
+Event: 3.888 Thread 0x0000000015ff4800  331       3       java.io.WinNTFileSystem::resolve (231 bytes)
+Event: 3.890 Thread 0x0000000015ff4800 nmethod 331 0x00000000031ea2d0 code [0x00000000031ea5a0, 0x00000000031ebf88]
+Event: 3.890 Thread 0x0000000015ff4800  332       3       java.io.BufferedInputStream::getBufIfOpen (21 bytes)
+Event: 3.890 Thread 0x0000000015ff4800 nmethod 332 0x00000000031da050 code [0x00000000031da1c0, 0x00000000031da408]
+Event: 3.890 Thread 0x0000000015ff4800  333  s    3       java.io.BufferedInputStream::read (49 bytes)
+Event: 3.891 Thread 0x0000000015ff4800 nmethod 333 0x00000000031d9750 code [0x00000000031d98e0, 0x00000000031d9e38]
+Event: 3.891 Thread 0x0000000015ff4800  334       3       java.io.DataInputStream::readUTF (501 bytes)
+Event: 3.894 Thread 0x0000000015ff4800 nmethod 334 0x00000000031eccd0 code [0x00000000031ed0a0, 0x00000000031ef2a8]
+Event: 3.895 Thread 0x0000000015ff4800  335  s    3       java.io.BufferedInputStream::read (113 bytes)
+Event: 3.896 Thread 0x0000000015ff4800 nmethod 335 0x00000000031d8810 code [0x00000000031d8a00, 0x00000000031d9378]
+Event: 3.896 Thread 0x0000000015ff4800  338       3       java.io.DataInputStream::readFully (63 bytes)
+Event: 3.897 Thread 0x0000000015ff4800 nmethod 338 0x00000000031f1d50 code [0x00000000031f1f00, 0x00000000031f23e8]
+Event: 3.897 Thread 0x0000000015ff4800  337       3       java.io.DataInputStream::readUnsignedShort (39 bytes)
+Event: 3.898 Thread 0x0000000015ff4800 nmethod 337 0x00000000031f2650 code [0x00000000031f27e0, 0x00000000031f2bc8]
+Event: 3.898 Thread 0x0000000015ff4800  339       3       java.io.DataInputStream::readUTF (5 bytes)
+Event: 3.898 Thread 0x0000000015ff4800 nmethod 339 0x00000000031f2d50 code [0x00000000031f2ec0, 0x00000000031f3048]
+Event: 3.898 Thread 0x0000000015ff4800  336       3       java.io.BufferedInputStream::read1 (108 bytes)
+Event: 3.899 Thread 0x0000000015ff4800 nmethod 336 0x00000000031f30d0 code [0x00000000031f32e0, 0x00000000031f3bd8]
+Event: 3.899 Thread 0x0000000015ff4800  340       3       java.io.DataInputStream::readShort (40 bytes)
+Event: 3.900 Thread 0x0000000015ff4800 nmethod 340 0x00000000031f6b90 code [0x00000000031f6d20, 0x00000000031f7108]
+Event: 3.900 Thread 0x0000000015ff4800  341       3       java.io.DataInputStream::readFully (9 bytes)
+Event: 3.900 Thread 0x0000000015ff4800 nmethod 341 0x00000000031f7290 code [0x00000000031f7400, 0x00000000031f7628]
+Event: 3.901 Thread 0x0000000015f40000 nmethod 327 0x00000000031f7710 code [0x00000000031f7960, 0x00000000031f8dc0]
+Event: 4.288 Thread 0x0000000015ff4800  342  s    3       java.io.ByteArrayInputStream::read (36 bytes)
+Event: 4.289 Thread 0x0000000015ff4800 nmethod 342 0x00000000031f1790 code [0x00000000031f1900, 0x00000000031f1c50]
+Event: 4.289 Thread 0x0000000015ff4800  343       3       java.io.DataInputStream::readByte (23 bytes)
+Event: 4.289 Thread 0x0000000015ff4800 nmethod 343 0x00000000031f1190 code [0x00000000031f1320, 0x00000000031f1638]
+Event: 4.290 Thread 0x0000000015ff4800  344       3       sun.util.calendar.ZoneInfoFile::indexOf (32 bytes)
+Event: 4.290 Thread 0x0000000015ff4800 nmethod 344 0x00000000031f0c10 code [0x00000000031f0d80, 0x00000000031f0ff0]
+Event: 4.291 Thread 0x0000000015ff4800  345       3       java.util.zip.CRC32::update (16 bytes)
+Event: 4.291 Thread 0x0000000015ff4800 nmethod 345 0x00000000031f6810 code [0x00000000031f6960, 0x00000000031f6af0]
+Event: 4.291 Thread 0x0000000015ff4800  346       3       sun.util.calendar.ZoneInfoFile$Checksum::update (39 bytes)
+Event: 4.291 Thread 0x0000000015ff4800 nmethod 346 0x00000000031f62d0 code [0x00000000031f6440, 0x00000000031f6750]
+Event: 4.357 Thread 0x0000000015ff4800  347       3       sun.util.locale.LocaleUtils::isUpper (18 bytes)
+Event: 4.358 Thread 0x0000000015ff4800 nmethod 347 0x00000000031f56d0 code [0x00000000031f5820, 0x00000000031f59f0]
+Event: 4.371 Thread 0x0000000015f4c000  348       4       java.lang.String::equals (81 bytes)
+Event: 4.372 Thread 0x0000000015ff4800  349       1       sun.util.locale.BaseLocale::getLanguage (5 bytes)
+Event: 4.372 Thread 0x0000000015ff4800 nmethod 349 0x00000000031f5410 code [0x00000000031f5560, 0x00000000031f5670]
+Event: 4.376 Thread 0x0000000015f4c000 nmethod 348 0x00000000031f4f10 code [0x00000000031f5060, 0x00000000031f5298]
+Event: 4.555 Thread 0x0000000015f40000  350  s    4       java.io.BufferedInputStream::read (49 bytes)
+Event: 4.555 Thread 0x0000000015ff4800  351       3       java.io.DataInputStream::readInt (72 bytes)
+Event: 4.555 Thread 0x0000000015ff4800 nmethod 351 0x00000000031f4550 code [0x00000000031f4700, 0x00000000031f4ca8]
+Event: 4.558 Thread 0x0000000015f40000 nmethod 350 0x00000000031fb7d0 code [0x00000000031fb920, 0x00000000031fbd48]
+Event: 4.560 Thread 0x0000000015ff4800  352       3       java.util.StringTokenizer::scanToken (179 bytes)
+Event: 4.562 Thread 0x0000000015ff4800 nmethod 352 0x00000000031fd0d0 code [0x00000000031fd340, 0x00000000031fe6b8]
+Event: 4.571 Thread 0x0000000015ff4800  353       3       java.util.StringTokenizer::skipDelimiters (116 bytes)
+Event: 4.573 Thread 0x0000000015ff4800 nmethod 353 0x00000000031fee90 code [0x00000000031ff0a0, 0x00000000031ffc78]
+Event: 4.573 Thread 0x0000000015ff4800  354       3       java.util.StringTokenizer::hasMoreTokens (29 bytes)
+Event: 4.573 Thread 0x0000000015ff4800 nmethod 354 0x00000000031f4150 code [0x00000000031f42c0, 0x00000000031f44c8]
+Event: 4.573 Thread 0x0000000015ff4800  356       1       java.util.HashMap::afterNodeInsertion (1 bytes)
+Event: 4.573 Thread 0x0000000015ff4800 nmethod 356 0x00000000031fce10 code [0x00000000031fcf60, 0x00000000031fd070]
+Event: 4.573 Thread 0x0000000015ff4800  355       3       java.util.StringTokenizer::nextToken (92 bytes)
+Event: 4.573 Thread 0x0000000015ff4800 nmethod 355 0x00000000031fc710 code [0x00000000031fc8c0, 0x00000000031fccb8]
+Event: 4.574 Thread 0x0000000015ff4800  357       1       java.lang.Class::getClassLoader0 (5 bytes)
+Event: 4.574 Thread 0x0000000015ff4800 nmethod 357 0x00000000031fc450 code [0x00000000031fc5a0, 0x00000000031fc6b0]
+Event: 4.585 Thread 0x0000000015ff4800  358       3       java.net.URLStreamHandler::parseURL (1193 bytes)
+Event: 4.604 Thread 0x0000000015ff4800 nmethod 358 0x0000000003200150 code [0x0000000003200ca0, 0x000000000320aae8]
+Event: 4.604 Thread 0x0000000015ff4800  359       3       java.lang.ref.WeakReference::<init> (7 bytes)
+Event: 4.604 Thread 0x0000000015ff4800 nmethod 359 0x00000000031fa890 code [0x00000000031faa00, 0x00000000031facb0]
+Event: 4.604 Thread 0x0000000015ff4800  360       3       java.io.FilterInputStream::<init> (10 bytes)
+Event: 4.605 Thread 0x0000000015ff4800 nmethod 360 0x00000000032112d0 code [0x0000000003211440, 0x0000000003211690]
+Event: 4.616 Thread 0x0000000015ff4800  361       3       java.util.Vector::ensureCapacityHelper (16 bytes)
+Event: 4.617 Thread 0x0000000015ff4800 nmethod 361 0x0000000003211790 code [0x0000000003211900, 0x0000000003211ac8]
+Event: 4.750 Thread 0x0000000015ff4800  362       3       sun.net.www.protocol.jar.Handler::checkNestedProtocol (18 bytes)
+Event: 4.750 Thread 0x0000000015ff4800 nmethod 362 0x0000000003211b90 code [0x0000000003211d00, 0x0000000003211f88]
+Event: 4.752 Thread 0x0000000015f40000  363       4       java.lang.String::getChars (62 bytes)
+Event: 4.753 Thread 0x0000000015ff4800  364       3       java.util.WeakHashMap::put (162 bytes)
+Event: 4.754 Thread 0x0000000015ff4800 nmethod 364 0x0000000003213550 code [0x0000000003213780, 0x0000000003214618]
+Event: 4.754 Thread 0x0000000015f40000 nmethod 363 0x0000000003216550 code [0x00000000032166a0, 0x0000000003216818]
+Event: 4.754 Thread 0x0000000015ff4800  365       3       java.util.zip.ZipFile$ZipFileInflaterInputStream::fill (80 bytes)
+Event: 4.754 Thread 0x0000000015ff4800 nmethod 365 0x0000000003212d90 code [0x0000000003212f40, 0x0000000003213368]
+Event: 4.754 Thread 0x0000000015ff4800  366   !   3       java.util.zip.ZipFile$ZipFileInputStream::read (131 bytes)
+Event: 4.755 Thread 0x0000000015ff4800 nmethod 366 0x0000000003215590 code [0x0000000003215760, 0x0000000003215fe8]
+Event: 4.787 Thread 0x0000000015ff4800  368       3       java.net.URL::toString (5 bytes)
+Event: 4.787 Thread 0x0000000015ff4800 nmethod 368 0x0000000003212850 code [0x00000000032129c0, 0x0000000003212ca8]
+Event: 4.790 Thread 0x0000000015ff4800  369       3       java.util.Objects::requireNonNull (15 bytes)
+Event: 4.790 Thread 0x0000000015ff4800 nmethod 369 0x0000000003214cd0 code [0x0000000003214e40, 0x0000000003215068]
+Event: 4.790 Thread 0x0000000015ff4800  370   !   3       java.util.zip.ZipFile::getInputStream (304 bytes)
+Event: 4.793 Thread 0x0000000015ff4800 nmethod 370 0x0000000003216990 code [0x0000000003216c20, 0x0000000003217df8]
+Event: 4.793 Thread 0x0000000015ff4800  371       3       java.util.zip.ZipFile::access$1100 (5 bytes)
+Event: 4.793 Thread 0x0000000015ff4800 nmethod 371 0x00000000032124d0 code [0x0000000003212640, 0x00000000032127a8]
+Event: 4.793 Thread 0x0000000015ff4800  372       3       java.util.zip.ZipFile::access$1200 (5 bytes)
+Event: 4.794 Thread 0x0000000015ff4800 nmethod 372 0x0000000003212150 code [0x00000000032122c0, 0x0000000003212428]
+Event: 4.810 Thread 0x0000000015ff4800  373       3       java.util.zip.ZipEntry::<init> (43 bytes)
+Event: 4.810 Thread 0x0000000015ff4800 nmethod 373 0x00000000032189d0 code [0x0000000003218b20, 0x0000000003218d30]
+Event: 4.814 Thread 0x0000000015ff4800  375       3       java.util.zip.ZipCoder::toString (190 bytes)
+Event: 4.816 Thread 0x0000000015ff4800 nmethod 375 0x0000000003219150 code [0x00000000032194e0, 0x000000000321b498]
+Event: 4.863 Thread 0x0000000015ff4800  378       3       java.util.zip.ZipEntry::setExtra0 (360 bytes)
+Event: 4.868 Thread 0x0000000015ff4800 nmethod 378 0x000000000321ccd0 code [0x000000000321cf80, 0x000000000321dc88]
+Event: 4.886 Thread 0x0000000015ff4800  379   !   3       java.util.zip.ZipFile$ZipFileInflaterInputStream::close (67 bytes)
+Event: 4.887 Thread 0x0000000015ff4800 nmethod 379 0x000000000321e290 code [0x000000000321e460, 0x000000000321ec58]
+Event: 4.888 Thread 0x0000000015ff4800  380       3       java.io.File::<init> (113 bytes)
+Event: 4.890 Thread 0x0000000015ff4800 nmethod 380 0x000000000321f010 code [0x000000000321f280, 0x000000000321ffa8]
+Event: 4.891 Thread 0x0000000015ff4800  381   !   3       java.util.zip.Inflater::reset (69 bytes)
+Event: 4.891 Thread 0x0000000015ff4800 nmethod 381 0x00000000032205d0 code [0x0000000003220760, 0x0000000003220bb8]
+Event: 4.937 Thread 0x0000000015ff4800  383       3       java.util.ArrayDeque::add (7 bytes)
+Event: 4.938 Thread 0x0000000015ff4800 nmethod 383 0x0000000003221110 code [0x0000000003221280, 0x0000000003221428]
+Event: 4.938 Thread 0x0000000015ff4800  384       3       java.util.ArrayDeque::addLast (53 bytes)
+Event: 4.938 Thread 0x0000000015ff4800 nmethod 384 0x00000000032214d0 code [0x0000000003221660, 0x0000000003221a78]
+Event: 4.940 Thread 0x0000000015f40000  385       4       java.lang.AbstractStringBuilder::append (50 bytes)
+Event: 4.942 Thread 0x0000000015ff4800  386       3       java.util.zip.ZipEntry::getSize (5 bytes)
+Event: 4.943 Thread 0x0000000015ff4800 nmethod 386 0x00000000031fa550 code [0x00000000031fa6a0, 0x00000000031fa7f0]
+Event: 4.947 Thread 0x0000000015f40000 nmethod 385 0x0000000003224c90 code [0x0000000003224de0, 0x0000000003225278]
+Event: 4.948 Thread 0x0000000015ff4800  387  s    3       java.net.URL::hashCode (30 bytes)
+Event: 4.948 Thread 0x0000000015ff4800 nmethod 387 0x0000000003224610 code [0x0000000003224780, 0x0000000003224ba8]
+Event: 4.955 Thread 0x0000000015ff4800  388       3       java.util.regex.Pattern::has (15 bytes)
+Event: 4.955 Thread 0x0000000015ff4800 nmethod 388 0x0000000003224290 code [0x00000000032243e0, 0x0000000003224590]
+Event: 5.027 Thread 0x0000000015ff4800  389  s    3       java.util.Vector::addElement (38 bytes)
+Event: 5.028 Thread 0x0000000015ff4800 nmethod 389 0x00000000032239d0 code [0x0000000003223b60, 0x0000000003224088]
+Event: 5.056 Thread 0x0000000015ff4800  390       3       java.security.CodeSource::hashCode (17 bytes)
+Event: 5.056 Thread 0x0000000015ff4800 nmethod 390 0x0000000003223110 code [0x00000000032232a0, 0x0000000003223828]
+Event: 5.082 Thread 0x0000000015ff4800  391       3       sun.misc.Resource::<init> (5 bytes)
+Event: 5.083 Thread 0x0000000015ff4800 nmethod 391 0x0000000003222d50 code [0x0000000003222ea0, 0x0000000003223050]
+Event: 5.091 Thread 0x0000000015ff4800  392       3       sun.net.www.protocol.jar.Handler::parseURL (223 bytes)
+Event: 5.111 Thread 0x0000000015ff4800 nmethod 392 0x00000000032255d0 code [0x00000000032258c0, 0x0000000003226fc8]
+Event: 5.113 Thread 0x0000000015ff4800  393       3       sun.misc.URLClassPath$JarLoader$2::<init> (26 bytes)
+Event: 5.114 Thread 0x0000000015ff4800 nmethod 393 0x0000000003222890 code [0x0000000003222a00, 0x0000000003222c50]
+Event: 5.324 Thread 0x0000000015ff4800  394       3       java.util.Hashtable$Enumerator::hasMoreElements (53 bytes)
+Event: 5.325 Thread 0x0000000015ff4800 nmethod 394 0x0000000003222110 code [0x0000000003222280, 0x0000000003222550]
+Event: 5.325 Thread 0x0000000015ff4800  395       3       java.util.Hashtable$Enumerator::nextElement (111 bytes)
+Event: 5.325 Thread 0x0000000015ff4800 nmethod 395 0x0000000003227b90 code [0x0000000003227d20, 0x0000000003228148]
+Event: 5.345 Thread 0x0000000015ff4800  396       3       java.lang.String::indexOf (166 bytes)
+Event: 5.346 Thread 0x0000000015ff4800 nmethod 396 0x0000000003228310 code [0x00000000032284c0, 0x0000000003228b10]
+Event: 5.346 Thread 0x0000000015ff4800  397  s    3       java.util.jar.JarFile::getInputStream (89 bytes)
+Event: 5.347 Thread 0x0000000015ff4800 nmethod 397 0x0000000003228ed0 code [0x00000000032290e0, 0x0000000003229c58]
+Event: 5.349 Thread 0x0000000015f40000  398       4       java.util.concurrent.ConcurrentHashMap::tabAt (21 bytes)
+Event: 5.350 Thread 0x0000000015f40000 nmethod 398 0x0000000003221f10 code [0x0000000003222040, 0x0000000003222098]
+Event: 5.350 Thread 0x0000000015ff4800  399       3       sun.misc.URLClassPath$JarLoader$2::getCodeSourceURL (8 bytes)
+Event: 5.351 Thread 0x0000000015ff4800 nmethod 399 0x000000000322c850 code [0x000000000322c9a0, 0x000000000322cb10]
+Event: 5.351 Thread 0x0000000015ff4800  400       3       sun.misc.URLClassPath$JarLoader$2::getManifest (26 bytes)
+Event: 5.351 Thread 0x0000000015ff4800 nmethod 400 0x000000000322bf50 code [0x000000000322c100, 0x000000000322c628]
+Event: 5.351 Thread 0x0000000015ff4800  401       3       sun.misc.Resource::getByteBuffer (24 bytes)
+Event: 5.352 Thread 0x0000000015ff4800 nmethod 401 0x000000000322b490 code [0x000000000322b640, 0x000000000322bdb8]
+Event: 5.352 Thread 0x0000000015ff4800  402       3       java.security.SecureClassLoader::defineClass (16 bytes)
+Event: 5.352 Thread 0x0000000015ff4800 nmethod 402 0x000000000322afd0 code [0x000000000322b140, 0x000000000322b3b8]
+Event: 5.352 Thread 0x0000000015ff4800  403       3       java.util.jar.Attributes::putValue (17 bytes)
+Event: 5.352 Thread 0x0000000015ff4800 nmethod 403 0x000000000322a890 code [0x000000000322aa20, 0x000000000322ae38]
+Event: 5.352 Thread 0x0000000015ff4800  404       3       java.util.jar.JavaUtilJarAccessImpl::getTrustedAttributes (6 bytes)
+Event: 5.352 Thread 0x0000000015ff4800 nmethod 404 0x000000000322a490 code [0x000000000322a600, 0x000000000322a7a8]
+Event: 5.352 Thread 0x0000000015ff4800  405       3       java.util.jar.Manifest::getAttributes (14 bytes)
+Event: 5.352 Thread 0x0000000015ff4800 nmethod 405 0x000000000322cbd0 code [0x000000000322cd40, 0x000000000322d068]
+Event: 5.393 Thread 0x0000000015ff4800  406   !   3       sun.misc.URLClassPath$FileLoader::getResource (164 bytes)
+Event: 5.398 Thread 0x0000000015ff4800 nmethod 406 0x000000000322d150 code [0x000000000322d480, 0x000000000322ecc8]
+Event: 5.400 Thread 0x0000000015ff4800  407       3       java.net.URLClassLoader::defineClass (142 bytes)
+Event: 5.404 Thread 0x0000000015ff4800 nmethod 407 0x000000000322fb90 code [0x000000000322ff00, 0x00000000032321d8]
+Event: 5.413 Thread 0x0000000015ff4800  408   !   3       sun.misc.URLClassPath$JarLoader::checkResource (55 bytes)
+Event: 5.414 Thread 0x0000000015ff4800 nmethod 408 0x0000000003233410 code [0x00000000032335c0, 0x0000000003233c28]
+Event: 5.591 Thread 0x0000000015ff4800  409       3       org.codehaus.plexus.classworlds.realm.ClassRealm::getImportClassLoader (47 bytes)
+Event: 5.592 Thread 0x0000000015ff4800 nmethod 409 0x0000000003235790 code [0x0000000003235960, 0x00000000032360a8]
+Event: 5.592 Thread 0x0000000015ff4800  410       3       java.util.TreeSet::iterator (15 bytes)
+Event: 5.592 Thread 0x0000000015ff4800 nmethod 410 0x00000000032362d0 code [0x0000000003236440, 0x0000000003236718]
+Event: 5.592 Thread 0x0000000015ff4800  411       3       java.util.TreeMap$KeyIterator::<init> (12 bytes)
+Event: 5.593 Thread 0x0000000015ff4800 nmethod 411 0x0000000003236810 code [0x0000000003236980, 0x0000000003236bf0]
+Event: 5.602 Thread 0x0000000015ff4800  412       3       java.util.zip.ZipFile::getZipEntry (251 bytes)
+Event: 5.608 Thread 0x0000000015ff4800 nmethod 412 0x0000000003236d10 code [0x0000000003236f60, 0x0000000003237b68]
+Event: 5.613 Thread 0x0000000015ff4800  413       3       java.net.URLStreamHandler::hostsEqual (75 bytes)
+Event: 5.614 Thread 0x0000000015ff4800 nmethod 413 0x0000000003237f90 code [0x0000000003238140, 0x0000000003238ab8]
+Event: 5.648 Thread 0x0000000015ff4800  414       3       org.codehaus.plexus.classworlds.realm.ClassRealm::findClass (9 bytes)
+Event: 5.648 Thread 0x0000000015ff4800 nmethod 414 0x0000000003238c90 code [0x0000000003238e00, 0x0000000003238fe8]
+Event: 5.648 Thread 0x0000000015ff4800  415       3       org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy::loadClass (50 bytes)
+Event: 5.649 Thread 0x0000000015ff4800 nmethod 415 0x0000000003239090 code [0x0000000003239280, 0x00000000032399f8]
+Event: 5.649 Thread 0x0000000015ff4800  416   !   3       org.codehaus.plexus.classworlds.realm.ClassRealm::loadClassFromSelf (40 bytes)
+Event: 5.650 Thread 0x0000000015ff4800 nmethod 416 0x0000000003239d90 code [0x0000000003239f40, 0x000000000323a578]
+Event: 5.650 Thread 0x0000000015ff4800  417       3       org.codehaus.plexus.classworlds.realm.ClassRealm::getClassRealmLoadingLock (14 bytes)
+Event: 5.650 Thread 0x0000000015ff4800 nmethod 417 0x000000000323a810 code [0x000000000323a980, 0x000000000323ab28]
+Event: 5.650 Thread 0x0000000015ff4800  418       3       java.security.CodeSource::equals (60 bytes)
+Event: 5.651 Thread 0x0000000015ff4800 nmethod 418 0x000000000323abd0 code [0x000000000323ad80, 0x000000000323b558]
+Event: 5.651 Thread 0x0000000015ff4800  419       3       sun.net.www.protocol.file.Handler::hostsEqual (69 bytes)
+Event: 5.652 Thread 0x0000000015ff4800 nmethod 419 0x000000000323bad0 code [0x000000000323bc80, 0x000000000323c3e8]
+Event: 5.652 Thread 0x0000000015f40000  421       4       java.util.concurrent.ConcurrentHashMap::casTabAt (20 bytes)
+Event: 5.654 Thread 0x0000000015f40000 nmethod 421 0x000000000323f210 code [0x000000000323f340, 0x000000000323f3b8]
+Event: 6.157 Thread 0x0000000015ff4800  422   !   3       java.util.zip.Inflater::setInput (74 bytes)
+Event: 6.158 Thread 0x0000000015ff4800 nmethod 422 0x000000000323e8d0 code [0x000000000323ea60, 0x000000000323efd8]
+Event: 6.161 Thread 0x0000000015ff4800  423       3       java.lang.Package::isSealed (13 bytes)
+Event: 6.162 Thread 0x0000000015ff4800 nmethod 423 0x000000000323e550 code [0x000000000323e6a0, 0x000000000323e850]
+Event: 6.179 Thread 0x0000000015ff4800  424       3       java.net.URLClassLoader::isSealed (70 bytes)
+Event: 6.180 Thread 0x0000000015ff4800 nmethod 424 0x000000000323d190 code [0x000000000323d3c0, 0x000000000323dfc8]
+Event: 6.182 Thread 0x0000000015ff4800  425       3       java.lang.ClassLoader::compareCerts (149 bytes)
+Event: 6.184 Thread 0x0000000015ff4800 nmethod 425 0x000000000323f410 code [0x000000000323f5e0, 0x000000000323fe98]
+Event: 6.193 Thread 0x0000000015f4c000  426       4       java.lang.String::indexOf (166 bytes)
+Event: 6.220 Thread 0x0000000015f4c000 nmethod 426 0x000000000323c850 code [0x000000000323c9a0, 0x000000000323cef8]
+Event: 6.554 Thread 0x0000000015ff4800  427       3       java.util.zip.ZipFile$ZipFileInputStream::<init> (41 bytes)
+Event: 6.554 Thread 0x0000000015ff4800 nmethod 427 0x0000000003242b90 code [0x0000000003242d20, 0x00000000032430b8]
+Event: 6.554 Thread 0x0000000015ff4800  428   !   3       java.util.zip.ZipFile::getInflater (56 bytes)
+Event: 6.555 Thread 0x0000000015ff4800 nmethod 428 0x0000000003241790 code [0x0000000003241980, 0x0000000003242558]
+Event: 6.555 Thread 0x0000000015ff4800  429       3       java.util.ArrayDeque::poll (5 bytes)
+Event: 6.555 Thread 0x0000000015ff4800 nmethod 429 0x00000000032413d0 code [0x0000000003241540, 0x00000000032416e8]
+Event: 6.555 Thread 0x0000000015ff4800  430       3       java.util.ArrayDeque::pollFirst (42 bytes)
+Event: 6.556 Thread 0x0000000015ff4800 nmethod 430 0x0000000003240dd0 code [0x0000000003240f40, 0x0000000003241270]
+Event: 6.556 Thread 0x0000000015ff4800  431       3       java.util.zip.InflaterInputStream::<init> (79 bytes)
+Event: 6.556 Thread 0x0000000015ff4800 nmethod 431 0x0000000003240290 code [0x0000000003240440, 0x0000000003240b18]
+Event: 6.595 Thread 0x0000000015ff4800  432   !   3       java.util.zip.ZipFile::releaseInflater (41 bytes)
+Event: 6.596 Thread 0x0000000015ff4800 nmethod 432 0x00000000032432d0 code [0x0000000003243480, 0x0000000003243b98]
+Event: 6.689 Thread 0x0000000015ff4800  433       3       java.util.Properties::getProperty (46 bytes)
+Event: 6.690 Thread 0x0000000015ff4800 nmethod 433 0x0000000003243e90 code [0x0000000003244020, 0x00000000032444d8]
+Event: 6.690 Thread 0x0000000015f4c000  434       4       java.lang.String::substring (79 bytes)
+Event: 6.706 Thread 0x0000000015f4c000 nmethod 434 0x0000000003247610 code [0x0000000003247780, 0x0000000003247b98]
+Event: 6.812 Thread 0x0000000015ff4800  435       1       java.util.logging.LogManager$LoggerContext::getOwner (5 bytes)
+Event: 6.812 Thread 0x0000000015ff4800 nmethod 435 0x0000000003247150 code [0x00000000032472a0, 0x00000000032473b0]
+Event: 6.821 Thread 0x0000000015ff4800  436       3       sun.net.www.protocol.jar.Handler::parseContextSpec (154 bytes)
+Event: 6.824 Thread 0x0000000015ff4800 nmethod 436 0x0000000003247ed0 code [0x00000000032482c0, 0x000000000324a9e8]
+Event: 6.824 Thread 0x0000000015ff4800  437       3       sun.net.www.protocol.jar.Handler::indexOfBangSlash (52 bytes)
+Event: 6.824 Thread 0x0000000015ff4800 nmethod 437 0x00000000032465d0 code [0x0000000003246780, 0x0000000003246eb8]
+Event: 6.824 Thread 0x0000000015ff4800  438       3       sun.net.www.ParseUtil::canonizeString (195 bytes)
+Event: 6.826 Thread 0x0000000015ff4800 nmethod 438 0x000000000324bbd0 code [0x000000000324bf80, 0x000000000324e3e8]
+Event: 6.826 Thread 0x0000000015ff4800  439       3       java.net.URLStreamHandler::setURL (159 bytes)
+Event: 6.828 Thread 0x0000000015ff4800 nmethod 439 0x0000000003244750 code [0x00000000032449c0, 0x0000000003245d48]
+Event: 6.848 Thread 0x0000000015ff4800  440       3       java.util.jar.JarFile::getManifestFromReference (117 bytes)
+Event: 6.849 Thread 0x0000000015ff4800 nmethod 440 0x000000000324f3d0 code [0x000000000324f620, 0x00000000032502b8]
+Event: 7.022 Thread 0x0000000015ff4800  441  s!   3       java.util.jar.JarFile::ensureInitialization (41 bytes)
+Event: 7.023 Thread 0x0000000015ff4800 nmethod 441 0x0000000003250890 code [0x0000000003250a20, 0x0000000003250ea8]
+Event: 7.024 Thread 0x0000000015ff4800  442       3       java.util.jar.JarFile::getManifest (5 bytes)
+Event: 7.025 Thread 0x0000000015ff4800 nmethod 442 0x0000000003251010 code [0x0000000003251180, 0x0000000003251308]
+Event: 7.025 Thread 0x0000000015ff4800  443       3       java.net.URLClassLoader::getAndVerifyPackage (109 bytes)
+Event: 7.025 Thread 0x0000000015f40000  450       4       sun.net.www.ParseUtil::encodePath (336 bytes)
+Event: 7.026 Thread 0x0000000015ff4800 nmethod 443 0x0000000003251710 code [0x0000000003251a00, 0x00000000032531c8]
+Event: 7.026 Thread 0x0000000015ff4800  447       3       sun.misc.URLClassPath$JarLoader$2::getContentLength (9 bytes)
+Event: 7.027 Thread 0x0000000015ff4800 nmethod 447 0x0000000003253c90 code [0x0000000003253e00, 0x0000000003254030]
+Event: 7.027 Thread 0x0000000015ff4800  448       3       sun.misc.URLClassPath$JarLoader$2::getCodeSigners (8 bytes)
+Event: 7.027 Thread 0x0000000015ff4800 nmethod 448 0x0000000003254110 code [0x0000000003254280, 0x00000000032544a8]
+Event: 7.027 Thread 0x0000000015ff4800  449   !   3       java.util.jar.JarFile$JarFileEntry::getCodeSigners (78 bytes)
+Event: 7.028 Thread 0x0000000015ff4800 nmethod 449 0x0000000003254550 code [0x0000000003254720, 0x0000000003254dd8]
+Event: 7.028 Thread 0x0000000015ff4800  444       3       sun.misc.URLClassPath$JarLoader$2::getInputStream (15 bytes)
+Event: 7.029 Thread 0x0000000015ff4800 nmethod 444 0x0000000003255050 code [0x00000000032551c0, 0x00000000032553e8]
+Event: 7.034 Thread 0x0000000015ff4800  445       3       java.lang.Thread::interrupted (8 bytes)
+Event: 7.035 Thread 0x0000000015ff4800 nmethod 445 0x00000000032554d0 code [0x0000000003255640, 0x00000000032557c8]
+Event: 7.043 Thread 0x0000000015ff4800  451       3       java.io.File::exists (43 bytes)
+Event: 7.043 Thread 0x0000000015ff4800 nmethod 451 0x0000000003255890 code [0x0000000003255a20, 0x0000000003255e88]
+Event: 7.045 Thread 0x0000000015ff4800  452   !   3       java.net.URLClassLoader::definePackageInternal (81 bytes)
+Event: 7.046 Thread 0x0000000015ff4800 nmethod 452 0x0000000003255fd0 code [0x0000000003256200, 0x0000000003256db8]
+Event: 7.046 Thread 0x0000000015ff4800  453   !   3       sun.misc.Resource::getBytes (242 bytes)
+Event: 7.048 Thread 0x0000000015ff4800 nmethod 453 0x00000000032572d0 code [0x00000000032575c0, 0x0000000003258f28]
+Event: 7.058 Thread 0x0000000015f40000 nmethod 450 0x000000000325d3d0 code [0x000000000325d580, 0x000000000325e0b0]
+Event: 7.058 Thread 0x0000000015ff4800  454       3       java.security.CodeSource::<init> (40 bytes)
+Event: 7.059 Thread 0x0000000015ff4800 nmethod 454 0x000000000325ccd0 code [0x000000000325ce60, 0x000000000325d2a8]
+Event: 7.147 Thread 0x0000000015ff4800  455       3       java.util.TreeMap::navigableKeySet (27 bytes)
+Event: 7.148 Thread 0x0000000015ff4800 nmethod 455 0x000000000325c1d0 code [0x000000000325c340, 0x000000000325c6d0]
+Event: 7.148 Thread 0x0000000015ff4800  456       3       java.util.TreeMap$KeySet::iterator (32 bytes)
+Event: 7.148 Thread 0x0000000015ff4800 nmethod 456 0x000000000325b450 code [0x000000000325b620, 0x000000000325bed8]
+Event: 7.149 Thread 0x0000000015ff4800  457       3       java.util.TreeMap::keyIterator (13 bytes)
+Event: 7.149 Thread 0x0000000015ff4800 nmethod 457 0x000000000325ab90 code [0x000000000325ad20, 0x000000000325b210]
+Event: 7.149 Thread 0x0000000015ff4800  458       3       java.util.TreeMap::getFirstEntry (26 bytes)
+Event: 7.149 Thread 0x0000000015ff4800 nmethod 458 0x000000000325a710 code [0x000000000325a880, 0x000000000325aab0]
+Event: 7.149 Thread 0x0000000015ff4800  459       3       java.util.TreeMap$PrivateEntryIterator::hasNext (13 bytes)
+Event: 7.149 Thread 0x0000000015ff4800 nmethod 459 0x000000000325a390 code [0x000000000325a4e0, 0x000000000325a690]
+
+GC Heap History (1 events):
+Event: 7.156 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 17920K, used 15360K [0x00000000ec400000, 0x00000000ed800000, 0x0000000100000000)
+  eden space 15360K, 100% used [0x00000000ec400000,0x00000000ed300000,0x00000000ed300000)
+  from space 2560K, 0% used [0x00000000ed580000,0x00000000ed580000,0x00000000ed800000)
+  to   space 2560K, 0% used [0x00000000ed300000,0x00000000ed300000,0x00000000ed580000)
+ ParOldGen       total 40960K, used 0K [0x00000000c4c00000, 0x00000000c7400000, 0x00000000ec400000)
+  object space 40960K, 0% used [0x00000000c4c00000,0x00000000c4c00000,0x00000000c7400000)
+ Metaspace       used 7227K, capacity 7388K, committed 7552K, reserved 1056768K
+  class space    used 756K, capacity 824K, committed 896K, reserved 1048576K
+
+Deoptimization events (2 events):
+Event: 3.625 Thread 0x0000000002f48000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000031c52e4 method=org.codehaus.plexus.util.xml.pull.MXParser.more()C @ 8
+Event: 5.343 Thread 0x0000000002f48000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000031987c8 method=java.lang.String.indexOf([CII[CIII)I @ 3
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (6 events):
+Event: 1.343 Thread 0x0000000002f48000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000ec407cc0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\sh
+Event: 1.343 Thread 0x0000000002f48000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000ec407fa8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jni.c
+Event: 2.864 Thread 0x0000000002f48000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec84ffe8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1519]
+Event: 2.865 Thread 0x0000000002f48000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec8501f8) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1519]
+Event: 2.866 Thread 0x0000000002f48000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec853fb0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1519]
+Event: 2.867 Thread 0x0000000002f48000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000ec8541c0) thrown at [C:\cygwin64\tmp\ojdkbuild\lookaside\java-1.8.0-openjdk\hotspot\src\share\vm\prims\jvm.cpp, line 1519]
+
+Events (250 events):
+Event: 5.664 loading class com/google/inject/internal/Initializer done
+Event: 5.676 loading class com/google/inject/internal/Initializable
+Event: 5.676 loading class com/google/inject/internal/Initializable done
+Event: 5.677 loading class com/google/inject/internal/CycleDetectingLock$CycleDetectingLockFactory
+Event: 5.677 loading class com/google/inject/internal/CycleDetectingLock$CycleDetectingLockFactory done
+Event: 5.680 loading class com/google/common/collect/Multimap
+Event: 5.680 loading class com/google/common/collect/Multimap done
+Event: 5.681 loading class com/google/inject/internal/CycleDetectingLock
+Event: 5.681 loading class com/google/inject/internal/CycleDetectingLock done
+Event: 5.682 loading class com/google/common/collect/Maps
+Event: 5.682 loading class com/google/common/collect/Maps done
+Event: 5.687 loading class com/google/common/collect/MapDifference
+Event: 5.687 loading class com/google/common/collect/MapDifference done
+Event: 5.687 loading class com/google/common/collect/SortedMapDifference
+Event: 5.687 loading class com/google/common/collect/SortedMapDifference done
+Event: 5.688 loading class com/google/common/base/Function
+Event: 5.688 loading class com/google/common/base/Function done
+Event: 5.689 loading class com/google/common/collect/BiMap
+Event: 5.689 loading class com/google/common/collect/BiMap done
+Event: 5.690 loading class com/google/common/collect/Maps$8
+Event: 5.690 loading class com/google/common/collect/Maps$8 done
+Event: 5.691 loading class com/google/common/collect/Maps$EntryTransformer
+Event: 5.691 loading class com/google/common/collect/Maps$EntryTransformer done
+Event: 5.692 loading class com/google/common/collect/ImmutableMap
+Event: 5.692 loading class com/google/common/collect/ImmutableMap done
+Event: 5.693 loading class com/google/common/collect/ImmutableEnumMap
+Event: 5.693 loading class com/google/common/collect/ImmutableEnumMap done
+Event: 5.789 loading class com/google/common/collect/ImmutableMap$IteratorBasedImmutableMap
+Event: 5.789 loading class com/google/common/collect/ImmutableMap$IteratorBasedImmutableMap done
+Event: 5.893 loading class com/google/common/base/Converter
+Event: 5.893 loading class com/google/common/base/Converter done
+Event: 5.894 loading class com/google/common/collect/Maps$BiMapConverter
+Event: 5.894 loading class com/google/common/collect/Maps$BiMapConverter done
+Event: 5.915 loading class com/google/common/collect/LinkedHashMultimap
+Event: 5.915 loading class com/google/common/collect/LinkedHashMultimap done
+Event: 6.051 loading class com/google/common/collect/LinkedHashMultimapGwtSerializationDependencies
+Event: 6.051 loading class com/google/common/collect/LinkedHashMultimapGwtSerializationDependencies done
+Event: 6.052 loading class com/google/common/collect/AbstractSetMultimap
+Event: 6.052 loading class com/google/common/collect/AbstractSetMultimap done
+Event: 6.074 Executing VM operation: EnableBiasedLocking
+Event: 6.075 Executing VM operation: EnableBiasedLocking done
+Event: 6.089 loading class com/google/common/collect/SetMultimap
+Event: 6.089 loading class com/google/common/collect/SetMultimap done
+Event: 6.091 loading class com/google/common/collect/AbstractMapBasedMultimap
+Event: 6.091 loading class com/google/common/collect/AbstractMapBasedMultimap done
+Event: 6.094 loading class com/google/common/collect/AbstractMultimap
+Event: 6.094 loading class com/google/common/collect/AbstractMultimap done
+Event: 6.124 loading class com/google/common/collect/AbstractMapBasedMultimap$WrappedList
+Event: 6.124 loading class com/google/common/collect/AbstractMapBasedMultimap$WrappedList done
+Event: 6.149 loading class com/google/common/collect/AbstractMapBasedMultimap$WrappedCollection
+Event: 6.149 loading class com/google/common/collect/AbstractMapBasedMultimap$WrappedCollection done
+Event: 6.151 loading class com/google/common/collect/AbstractMapBasedMultimap$RandomAccessWrappedList
+Event: 6.151 loading class com/google/common/collect/AbstractMapBasedMultimap$RandomAccessWrappedList done
+Event: 6.154 loading class com/google/common/collect/Multiset
+Event: 6.154 loading class com/google/common/collect/Multiset done
+Event: 6.157 loading class com/google/common/collect/Platform
+Event: 6.157 loading class com/google/common/collect/Platform done
+Event: 6.158 loading class com/google/common/collect/CompactLinkedHashMap
+Event: 6.158 loading class com/google/common/collect/CompactLinkedHashMap done
+Event: 6.159 loading class com/google/common/collect/CompactHashMap
+Event: 6.159 loading class com/google/common/collect/CompactHashMap done
+Event: 6.189 loading class com/google/common/collect/LinkedHashMultimap$ValueEntry
+Event: 6.189 loading class com/google/common/collect/LinkedHashMultimap$ValueEntry done
+Event: 6.191 loading class com/google/common/collect/LinkedHashMultimap$ValueSetLink
+Event: 6.191 loading class com/google/common/collect/LinkedHashMultimap$ValueSetLink done
+Event: 6.192 loading class com/google/common/collect/ImmutableEntry
+Event: 6.192 loading class com/google/common/collect/ImmutableEntry done
+Event: 6.221 loading class com/google/common/collect/AbstractMapEntry
+Event: 6.221 loading class com/google/common/collect/AbstractMapEntry done
+Event: 6.223 loading class com/google/common/collect/Lists
+Event: 6.223 loading class com/google/common/collect/Lists done
+Event: 6.227 loading class com/google/common/collect/ImmutableList
+Event: 6.227 loading class com/google/common/collect/ImmutableList done
+Event: 6.243 loading class com/google/common/collect/Lists$StringAsImmutableList
+Event: 6.243 loading class com/google/common/collect/Lists$StringAsImmutableList done
+Event: 6.249 loading class com/google/common/collect/Lists$Partition
+Event: 6.249 loading class com/google/common/collect/Lists$Partition done
+Event: 6.553 loading class com/google/common/collect/Lists$RandomAccessPartition
+Event: 6.553 loading class com/google/common/collect/Lists$RandomAccessPartition done
+Event: 6.554 loading class com/google/common/collect/Lists$TransformingRandomAccessList
+Event: 6.554 loading class com/google/common/collect/Lists$TransformingRandomAccessList done
+Event: 6.555 loading class com/google/common/collect/Lists$TransformingSequentialList
+Event: 6.555 loading class com/google/common/collect/Lists$TransformingSequentialList done
+Event: 6.558 loading class com/google/inject/internal/InjectorShell$Builder
+Event: 6.558 loading class com/google/inject/internal/InjectorShell$Builder done
+Event: 6.559 loading class com/google/inject/internal/State
+Event: 6.559 loading class com/google/inject/internal/State done
+Event: 6.578 loading class com/google/inject/internal/InjectionRequestProcessor
+Event: 6.578 loading class com/google/inject/internal/InjectionRequestProcessor done
+Event: 6.580 loading class com/google/inject/internal/AbstractProcessor
+Event: 6.580 loading class com/google/inject/internal/AbstractProcessor done
+Event: 6.581 loading class com/google/inject/spi/DefaultElementVisitor
+Event: 6.581 loading class com/google/inject/spi/DefaultElementVisitor done
+Event: 6.582 loading class com/google/inject/internal/ProcessedBindingData
+Event: 6.582 loading class com/google/inject/internal/ProcessedBindingData done
+Event: 6.583 loading class com/google/inject/internal/InheritingState
+Event: 6.583 loading class com/google/inject/internal/InheritingState done
+Event: 6.585 loading class com/google/inject/internal/State$1
+Event: 6.585 loading class com/google/inject/internal/State$1 done
+Event: 6.586 loading class com/google/inject/internal/WeakKeySet
+Event: 6.586 loading class com/google/inject/internal/WeakKeySet done
+Event: 6.587 loading class com/google/common/cache/RemovalListener
+Event: 6.587 loading class com/google/common/cache/RemovalListener done
+Event: 6.588 loading class com/google/common/cache/CacheBuilder
+Event: 6.588 loading class com/google/common/cache/CacheBuilder done
+Event: 6.590 loading class com/google/common/base/Supplier
+Event: 6.590 loading class com/google/common/base/Supplier done
+Event: 6.591 loading class com/google/common/base/Ticker
+Event: 6.591 loading class com/google/common/base/Ticker done
+Event: 6.592 loading class com/google/common/cache/CacheBuilder$3
+Event: 6.592 loading class com/google/common/cache/CacheBuilder$3 done
+Event: 6.595 loading class com/google/common/cache/Cache
+Event: 6.595 loading class com/google/common/cache/Cache done
+Event: 6.595 loading class com/google/common/cache/LoadingCache
+Event: 6.595 loading class com/google/common/cache/LoadingCache done
+Event: 6.620 loading class com/google/common/cache/CacheBuilder$1
+Event: 6.620 loading class com/google/common/cache/CacheBuilder$1 done
+Event: 6.621 loading class com/google/common/cache/AbstractCache$StatsCounter
+Event: 6.621 loading class com/google/common/cache/AbstractCache$StatsCounter done
+Event: 6.626 loading class com/google/common/base/Suppliers
+Event: 6.626 loading class com/google/common/base/Suppliers done
+Event: 6.650 loading class com/google/common/base/Suppliers$SupplierOfInstance
+Event: 6.650 loading class com/google/common/base/Suppliers$SupplierOfInstance done
+Event: 6.652 loading class com/google/common/cache/CacheStats
+Event: 6.652 loading class com/google/common/cache/CacheStats done
+Event: 6.658 loading class com/google/common/cache/CacheBuilder$2
+Event: 6.658 loading class com/google/common/cache/CacheBuilder$2 done
+Event: 6.659 loading class com/google/common/base/Ticker$1
+Event: 6.659 loading class com/google/common/base/Ticker$1 done
+Event: 6.690 loading class com/google/common/cache/LocalCache$Strength
+Event: 6.690 loading class com/google/common/cache/LocalCache$Strength done
+Event: 6.696 loading class com/google/common/cache/LocalCache$Strength$1
+Event: 6.696 loading class com/google/common/cache/LocalCache$Strength$1 done
+Event: 6.709 loading class com/google/common/cache/LocalCache$Strength$2
+Event: 6.709 loading class com/google/common/cache/LocalCache$Strength$2 done
+Event: 6.710 loading class com/google/common/cache/LocalCache$Strength$3
+Event: 6.710 loading class com/google/common/cache/LocalCache$Strength$3 done
+Event: 6.710 loading class com/google/common/cache/LocalCache$StrongValueReference
+Event: 6.710 loading class com/google/common/cache/LocalCache$StrongValueReference done
+Event: 6.712 loading class com/google/common/cache/LocalCache$ValueReference
+Event: 6.712 loading class com/google/common/cache/LocalCache$ValueReference done
+Event: 6.713 loading class com/google/common/cache/LocalCache$WeightedStrongValueReference
+Event: 6.713 loading class com/google/common/cache/LocalCache$WeightedStrongValueReference done
+Event: 6.783 loading class com/google/common/cache/LocalCache$SoftValueReference
+Event: 6.783 loading class com/google/common/cache/LocalCache$SoftValueReference done
+Event: 6.784 loading class com/google/common/cache/LocalCache$WeightedSoftValueReference
+Event: 6.784 loading class com/google/common/cache/LocalCache$WeightedSoftValueReference done
+Event: 6.785 loading class com/google/common/cache/LocalCache$WeakValueReference
+Event: 6.785 loading class com/google/common/cache/LocalCache$WeakValueReference done
+Event: 6.786 loading class com/google/common/cache/LocalCache$WeightedWeakValueReference
+Event: 6.786 loading class com/google/common/cache/LocalCache$WeightedWeakValueReference done
+Event: 6.787 loading class com/google/inject/internal/WeakKeySet$1
+Event: 6.787 loading class com/google/inject/internal/WeakKeySet$1 done
+Event: 6.787 loading class com/google/common/cache/LocalCache$LocalManualCache
+Event: 6.787 loading class com/google/common/cache/LocalCache$LocalManualCache done
+Event: 6.789 loading class com/google/common/cache/CacheLoader
+Event: 6.789 loading class com/google/common/cache/CacheLoader done
+Event: 6.789 loading class com/google/common/cache/LocalCache$LocalManualCache$1
+Event: 6.789 loading class com/google/common/cache/LocalCache$LocalManualCache$1 done
+Event: 6.790 loading class com/google/common/cache/LocalCache
+Event: 6.790 loading class com/google/common/cache/LocalCache done
+Event: 6.793 loading class com/google/common/cache/CacheLoader$UnsupportedLoadingOperationException
+Event: 6.793 loading class com/google/common/cache/CacheLoader$UnsupportedLoadingOperationException done
+Event: 6.795 loading class com/google/common/cache/CacheLoader$InvalidCacheLoadException
+Event: 6.795 loading class com/google/common/cache/CacheLoader$InvalidCacheLoadException done
+Event: 6.796 loading class java/util/concurrent/ExecutionException
+Event: 6.796 loading class java/util/concurrent/ExecutionException done
+Event: 6.808 loading class com/google/common/util/concurrent/UncheckedExecutionException
+Event: 6.808 loading class com/google/common/util/concurrent/UncheckedExecutionException done
+Event: 6.809 loading class com/google/common/util/concurrent/ExecutionError
+Event: 6.810 loading class com/google/common/util/concurrent/ExecutionError done
+Event: 6.811 loading class com/google/common/cache/ReferenceEntry
+Event: 6.811 loading class com/google/common/cache/ReferenceEntry done
+Event: 6.812 loading class com/google/common/cache/LocalCache$1
+Event: 6.812 loading class com/google/common/cache/LocalCache$1 done
+Event: 6.815 loading class com/google/common/cache/LocalCache$2
+Event: 6.815 loading class com/google/common/cache/LocalCache$2 done
+Event: 6.816 loading class com/google/common/base/MoreObjects
+Event: 6.816 loading class com/google/common/base/MoreObjects done
+Event: 6.819 loading class com/google/common/base/Equivalence
+Event: 6.819 loading class com/google/common/base/Equivalence done
+Event: 6.820 loading class com/google/common/base/Equivalence$Equals
+Event: 6.820 loading class com/google/common/base/Equivalence$Equals done
+Event: 6.820 loading class com/google/common/base/Equivalence$Identity
+Event: 6.820 loading class com/google/common/base/Equivalence$Identity done
+Event: 6.821 loading class com/google/common/base/FunctionalEquivalence
+Event: 6.821 loading class com/google/common/base/FunctionalEquivalence done
+Event: 6.822 loading class com/google/common/base/PairwiseEquivalence
+Event: 6.822 loading class com/google/common/base/PairwiseEquivalence done
+Event: 6.825 loading class com/google/common/base/Predicate
+Event: 6.825 loading class com/google/common/base/Predicate done
+Event: 6.831 loading class com/google/common/cache/CacheBuilder$OneWeigher
+Event: 6.831 loading class com/google/common/cache/CacheBuilder$OneWeigher done
+Event: 6.840 loading class com/google/common/cache/Weigher
+Event: 6.840 loading class com/google/common/cache/Weigher done
+Event: 6.841 loading class com/google/common/cache/CacheBuilder$NullListener
+Event: 6.841 loading class com/google/common/cache/CacheBuilder$NullListener done
+Event: 6.842 loading class java/util/concurrent/ConcurrentLinkedQueue
+Event: 6.842 loading class java/util/concurrent/ConcurrentLinkedQueue done
+Event: 6.845 loading class java/util/concurrent/ConcurrentLinkedQueue$Node
+Event: 6.845 loading class java/util/concurrent/ConcurrentLinkedQueue$Node done
+Event: 6.845 loading class com/google/common/cache/LocalCache$EntryFactory
+Event: 6.845 loading class com/google/common/cache/LocalCache$EntryFactory done
+Event: 6.847 loading class com/google/common/cache/LocalCache$EntryFactory$1
+Event: 6.847 loading class com/google/common/cache/LocalCache$EntryFactory$1 done
+Event: 6.850 loading class com/google/common/cache/LocalCache$EntryFactory$2
+Event: 6.850 loading class com/google/common/cache/LocalCache$EntryFactory$2 done
+Event: 7.021 loading class com/google/common/cache/LocalCache$EntryFactory$3
+Event: 7.021 loading class com/google/common/cache/LocalCache$EntryFactory$3 done
+Event: 7.022 loading class com/google/common/cache/LocalCache$EntryFactory$4
+Event: 7.022 loading class com/google/common/cache/LocalCache$EntryFactory$4 done
+Event: 7.025 loading class com/google/common/cache/LocalCache$EntryFactory$5
+Event: 7.025 loading class com/google/common/cache/LocalCache$EntryFactory$5 done
+Event: 7.026 loading class com/google/common/cache/LocalCache$EntryFactory$6
+Event: 7.026 loading class com/google/common/cache/LocalCache$EntryFactory$6 done
+Event: 7.041 loading class com/google/common/cache/LocalCache$EntryFactory$7
+Event: 7.041 loading class com/google/common/cache/LocalCache$EntryFactory$7 done
+Event: 7.041 loading class com/google/common/cache/LocalCache$EntryFactory$8
+Event: 7.041 loading class com/google/common/cache/LocalCache$EntryFactory$8 done
+Event: 7.043 loading class com/google/common/cache/LocalCache$Segment
+Event: 7.043 loading class com/google/common/cache/LocalCache$Segment done
+Event: 7.078 loading class java/util/concurrent/Future
+Event: 7.081 loading class java/util/concurrent/Future done
+Event: 7.083 loading class java/util/concurrent/atomic/AtomicReferenceArray
+Event: 7.088 loading class java/util/concurrent/atomic/AtomicReferenceArray done
+Event: 7.092 loading class com/google/inject/internal/InjectorShell$RootModule
+Event: 7.092 loading class com/google/inject/internal/InjectorShell$RootModule done
+Event: 7.127 loading class com/google/inject/spi/Elements
+Event: 7.127 loading class com/google/inject/spi/Elements done
+Event: 7.127 loading class com/google/inject/spi/BindingTargetVisitor
+Event: 7.127 loading class com/google/inject/spi/BindingTargetVisitor done
+Event: 7.140 loading class com/google/inject/spi/Elements$1
+Event: 7.140 loading class com/google/inject/spi/Elements$1 done
+Event: 7.141 loading class com/google/inject/spi/DefaultBindingTargetVisitor
+Event: 7.141 loading class com/google/inject/spi/DefaultBindingTargetVisitor done
+Event: 7.142 loading class com/google/inject/Binding
+Event: 7.142 loading class com/google/inject/Binding done
+Event: 7.143 loading class com/google/inject/spi/Elements$RecordingBinder
+Event: 7.143 loading class com/google/inject/spi/Elements$RecordingBinder done
+Event: 7.147 loading class com/google/inject/binder/AnnotatedElementBuilder
+Event: 7.147 loading class com/google/inject/binder/AnnotatedElementBuilder done
+Event: 7.150 loading class com/google/common/collect/Sets
+Event: 7.150 loading class com/google/common/collect/Sets done
+Event: 7.152 loading class com/google/common/collect/Sets$SetView
+Event: 7.152 loading class com/google/common/collect/Sets$SetView done
+Event: 7.153 loading class com/google/common/collect/Sets$1
+Event: 7.153 loading class com/google/common/collect/Sets$1 done
+Event: 7.155 loading class com/google/common/collect/Sets$2
+Event: 7.155 loading class com/google/common/collect/Sets$2 done
+Event: 7.156 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+0x00007ff64f180000 - 0x00007ff64f20b000 	C:\Program Files\Java\openjdk\bin\java.exe
+0x00007ffd112b0000 - 0x00007ffd114a6000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffd10680000 - 0x00007ffd1073d000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffd0f020000 - 0x00007ffd0f2e8000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffd10740000 - 0x00007ffd107ea000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffd0f660000 - 0x00007ffd0f6fe000 	C:\Windows\System32\msvcrt.dll
+0x00007ffd10480000 - 0x00007ffd1051b000 	C:\Windows\System32\sechost.dll
+0x00007ffd0f530000 - 0x00007ffd0f654000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffd0f320000 - 0x00007ffd0f4c0000 	C:\Windows\System32\USER32.dll
+0x00007ffd0f2f0000 - 0x00007ffd0f312000 	C:\Windows\System32\win32u.dll
+0x00007ffd0f8e0000 - 0x00007ffd0f90a000 	C:\Windows\System32\GDI32.dll
+0x00007ffd0ed90000 - 0x00007ffd0ee99000 	C:\Windows\System32\gdi32full.dll
+0x00007ffd0ea00000 - 0x00007ffd0ea9d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffd0ec90000 - 0x00007ffd0ed90000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd0ddb0000 - 0x00007ffd0e04b000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.488_none_ca04af081b815d21\COMCTL32.dll
+0x00007ffd0ffd0000 - 0x00007ffd10000000 	C:\Windows\System32\IMM32.DLL
+0x0000000061e80000 - 0x0000000061f52000 	C:\Program Files\Java\openjdk\jre\bin\msvcr100.dll
+0x0000000061550000 - 0x0000000061e76000 	C:\Program Files\Java\openjdk\jre\bin\server\jvm.dll
+0x00007ffd0f4c0000 - 0x00007ffd0f4c8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffd085e0000 - 0x00007ffd085e9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffd10610000 - 0x00007ffd1067b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffcfff20000 - 0x00007ffcfff47000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd00c50000 - 0x00007ffd00c5a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffd082b0000 - 0x00007ffd082bf000 	C:\Program Files\Java\openjdk\jre\bin\verify.dll
+0x00007ffcee460000 - 0x00007ffcee489000 	C:\Program Files\Java\openjdk\jre\bin\java.dll
+0x00007ffcee440000 - 0x00007ffcee456000 	C:\Program Files\Java\openjdk\jre\bin\zip.dll
+0x00007ffd107f0000 - 0x00007ffd10f30000 	C:\Windows\System32\SHELL32.dll
+0x00007ffd0bdc0000 - 0x00007ffd0c554000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffd10000000 - 0x00007ffd10355000 	C:\Windows\System32\combase.dll
+0x00007ffd0dd80000 - 0x00007ffd0ddac000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffd103d0000 - 0x00007ffd1047e000 	C:\Windows\System32\SHCORE.dll
+0x00007ffd0f910000 - 0x00007ffd0f965000 	C:\Windows\System32\shlwapi.dll
+0x00007ffd0e930000 - 0x00007ffd0e956000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffd04ce0000 - 0x00007ffd04cea000 	C:\Program Files\apache-maven-3.6.3\lib\jansi-native\windows64\jansi.dll
+0x00007ffd0e290000 - 0x00007ffd0e474000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x00007ffd0efa0000 - 0x00007ffd0f01f000 	C:\Windows\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files\apache-maven-3.6.3\bin\..\bin\m2.conf -Dmaven.home=C:\Program Files\apache-maven-3.6.3\bin\.. -Dlibrary.jansi.path=C:\Program Files\apache-maven-3.6.3\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=c:\Users\Kevin\Documents\JAVA\kataTDD 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher help:effective-pom -Doutput=c:\Users\Kevin\AppData\Roaming\Code\User\workspaceStorage\2924f3d97acc95b94ae7a46709a456c9\vscjava.vscode-maven\cda454b11188b4efb9880fdc5927a3b8 -f c:\Users\Kevin\Documents\JAVA\kataTDD\pom.xml
+java_class_path (initial): C:\Program Files\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\openjdk\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\RedHat\java-11-openjdk-11.0.8-2\bin;C:\Users\Kevin\AppData\Local\Microsoft\WindowsApps;C:\Users\Kevin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\openjdk\bin;
+USERNAME=Kevin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.546)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 3882796k(183588k free), swap 12009260k(7481508k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.265-b01) for windows-amd64 JRE (1.8.0_265-b01), built on Aug  5 2020 06:56:30 by "build" with MS VC++ 10.0 (VS2010)
+
+time: Thu Oct 22 15:26:12 2020
+timezone: Paris, Madrid (heure d’été)
+elapsed time: 7 seconds (0d 0h 0m 7s)
+
